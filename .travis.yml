@@ -11,8 +11,7 @@ script:
   - npm run build
 
 deploy:
-  provider: github
-  github-token: $GITHUB_TOKEN
-  local_dir: build
-  on:
-    branch: master
+  provider: heroku
+  api_key:
+    secure: $HEROKU_TOKEN
+    app: react-zx
